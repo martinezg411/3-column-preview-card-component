@@ -1,0 +1,118 @@
+:root {
+  /* Colors */
+  --clr-bright-orange: hsl(31, 77%, 52%);
+  --clr-dark-cyan: hsl(184, 100%, 22%);
+  --clr-darker-cyan: hsl(179, 100%, 13%);
+  --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --clr-light-gray: hsl(0, 0%, 95%);
+
+  /* Font Sizes */
+  --font-size: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  min-width: 735px;
+  transform: translateY(10vh);
+}
+
+.container div:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.container div:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.container div {
+  padding: 2em;
+}
+
+.section1 {
+  background-color: var(--clr-bright-orange);
+}
+
+.section2 {
+  background-color: var(--clr-dark-cyan);
+}
+
+.section3 {
+  background-color: var(--clr-darker-cyan);
+}
+
+.section1 button {
+  color: var(--clr-bright-orange);
+}
+
+.section2 button {
+  color: var(--clr-dark-cyan);
+}
+
+.section3 button {
+  color: var(--clr-darker-cyan);
+}
+
+.btn {
+  padding: 0.8em 1.6em;
+  border-radius: 40px;
+  outline: none;
+  border: 2px white solid;
+  font-family: 'Lexend Deca';
+}
+
+.btn:hover {
+  background-color: inherit;
+  color: white;
+  cursor: pointer;
+}
+
+h1 {
+  color: var(--clr-light-gray);
+  font-family: 'Big Shoulders Display', sans-serif;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--clr-transparent-white);
+  font-size: var(--font-size);
+  line-height: 1.75em;
+  margin-bottom: 4rem;
+}
+
+svg {
+  margin-bottom: 2em;
+}
+
+@media (max-width: 735px) {
+  .container {
+    min-width: 85%;
+    flex-direction: column;
+  }
+
+  .container div:first-child {
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .container div:last-child {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 5px;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+}
